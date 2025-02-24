@@ -16,6 +16,7 @@ mysql = MySQL(app)
 def init_db():
     with app.app_context():
         cur = mysql.connection.cursor()
+        
         cur.execute('''
         CREATE TABLE IF NOT EXISTS messages (
             id INT AUTO_INCREMENT PRIMARY KEY,
